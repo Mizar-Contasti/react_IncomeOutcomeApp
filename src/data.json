@@ -1,0 +1,139 @@
+{
+  "Start": [
+    {
+      "debt": 1200,
+      "currently": 500
+    }
+  ],
+  "Movements": [
+    {
+      "Monthly": [
+        {
+          "Agosto": [
+            {
+              "Incomes": [
+                {
+                  "name": "inversion",
+                  "amount": 250,
+                  "description": "retorno de inversion"
+                }
+              ],
+              "Outcomes": [
+                {
+                  "name": "parque",
+                  "amount": 500,
+                  "description": "salida al parque"
+                }
+              ]
+            }
+          ],
+          "Septiembre": [
+            {
+              "Incomes": [
+                {
+                  "name": "inversion",
+                  "amount": 250,
+                  "description": "retorno de inversion"
+                }
+              ],
+              "Outcomes": [
+                {
+                  "name": "parque",
+                  "amount": 500,
+                  "description": "salida al parque"
+                }
+              ]
+            }
+          ],
+          "Octubre": [
+            {
+              "Incomes": [
+                {
+                  "name": "inversion",
+                  "amount": 250,
+                  "description": "retorno de inversion"
+                }
+              ],
+              "Outcomes": [
+                {
+                  "name": "parque",
+                  "amount": 500,
+                  "description": "salida al parque"
+                }
+              ]
+            }
+          ],
+          "Noviembre": [
+            {
+              "Incomes": [
+                {
+                  "name": "inversion",
+                  "amount": 250,
+                  "description": "retorno de inversion"
+                }
+              ],
+              "Outcomes": [
+                {
+                  "name": "parque",
+                  "amount": 500,
+                  "description": "salida al parque"
+                }
+              ]
+            }
+          ],
+          "Diciembre": [
+            {
+              "Incomes": [
+                {
+                  "name": "inversion",
+                  "amount": 250,
+                  "description": "retorno de inversion"
+                }
+              ],
+              "Outcomes": [
+                {
+                  "name": "parque",
+                  "amount": 500,
+                  "description": "salida al parque"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Unusual": [
+        {
+          "Incomes": [
+            {
+              "name": "salary",
+              "amount": 55000,
+              "description": "salario base"
+            }
+          ],
+          "Outcomes": [
+            {
+              "name": "renta",
+              "amount": 5000,
+              "description": "rental base"
+            },
+            {
+              "name": "mercado",
+              "amount": 3000,
+              "description": "mercado base"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Config": [
+    {
+      "Country": "Mexico",
+      "Currency": "pesos",
+      "Symbol": "$",
+      "Language": "es"
+    }
+  ]
+}

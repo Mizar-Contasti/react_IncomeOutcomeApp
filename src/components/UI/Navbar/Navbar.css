@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+}
+
+.navbar__title {
+  display: flex;
+  height: 11vh;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 5px 5px 10px;
+}

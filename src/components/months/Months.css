@@ -1,0 +1,27 @@
+.months {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.month {
+  width: 100%;
+  display: block;
+  height: 90px;
+  display: flex;
+
+  background-color: red;
+  margin-bottom: 10px;
+  justify-content: right;
+}
+
+.month__wrapper {
+  width: 87%;
+  background-color: blue;
+  justify-content: center;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
