@@ -18,7 +18,7 @@ const Month = (props) => {
 
   const monthHandler = (e) => {
     let monthValue = e.target.innerText;
-    console.log(e.target);
+    // console.log(e.target);
     props.onSaveMonth(monthValue);
   };
 

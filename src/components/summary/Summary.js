@@ -4,87 +4,54 @@ import { useState } from "react";
 
 import data from "./../../data.json";
 
-const monthSummary = {
-  Enero: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Febrero: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Marzo: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Abril: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Mayo: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Junio: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Julio: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Agosto: {
-    Gastos: "3000",
-    Ingresos: "6000",
-  },
-  Septiembre: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Octubre: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Noviembre: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-  Diciembre: {
-    Gastos: "1000",
-    Ingresos: "2000",
-  },
-};
+let allMonths = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
+];
 
 const Summary = (props) => {
-  console.log(props.summary);
-  console.log(data);
+  let monthData =
+    data.Movements[0].Monthly[0][
+      `${allMonths[moment().add(0, "M").format("M") - 1]}`
+    ][0];
 
-  let ingresos = props.summary.Ingresos;
-  let gastos = props.summary.Gastos;
+  let { Incomes, Outcomes } = monthData;
 
-  let allMonths = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
-
-  //   console.log(monthSummary[props.name]);
-
-  const [currentSummary, setSummary] = useState("");
-
-  const displaySummary = (e) => {
-    console.log(e);
-    // setSummary(monthSummary[month]);
+  const calcIncomes = (Incomes) => {
+    let baseIncome = 0;
+    for (let i = 0; i < Incomes.length; i++) {
+      baseIncome += Incomes[i].amount;
+    }
+    return baseIncome;
   };
+
+  const calcOutcomes = (Outcomes) => {
+    let baseOutcome = 0;
+    for (let i = 0; i < Outcomes.length; i++) {
+      baseOutcome += Outcomes[i].amount;
+    }
+    return baseOutcome;
+  };
+
+  const [title, setTitle] = useState("");
+
+  const titleHandler = () => {
+    setTitle(props.name);
+    console.log(props.name);
+  };
+
+  const [currentOutcomes, setOutcomes] = useState(calcOutcomes(Outcomes));
+  const [currentIncomes, setIncomes] = useState(calcIncomes(Incomes));
 
   const getCurrentMonth = () => {
     return allMonths[moment().add(0, "M").format("M") - 1];
@@ -92,32 +59,34 @@ const Summary = (props) => {
 
   const getCurrentSummary = (type) => {
     if (type === "income") {
-      return (
-        "Ingresos: $" +
-        monthSummary[allMonths[moment().add(0, "M").format("M") - 1]].Ingresos
-      );
+      return `Ingresos: $ ${calcIncomes(Incomes)}`;
     } else {
-      return (
-        "Gastos: $" +
-        monthSummary[allMonths[moment().add(0, "M").format("M") - 1]].Gastos
-      );
+      return `Gastos: $ ${calcOutcomes(Outcomes)}`;
     }
+  };
+
+  const IncomeHandler = (e) => {
+    setIncomes(getCurrentSummary("income"));
+  };
+
+  const OutcomeHandler = (e) => {
+    setOutcomes(getCurrentSummary("outcome"));
   };
 
   return (
     <div className="summary">
-      <div onChange={displaySummary} className="summary__title">
-        {props.name || getCurrentMonth()}
+      <div onClick={titleHandler} className="summary__title">
+        {title || getCurrentMonth()}
       </div>
 
       <div className="summary__content">
         <div className="summary__resumme--title">Resumen</div>
         <div className="summary__resumme">
           <div className="summary__content-income">
-            {ingresos || getCurrentSummary("income")}
+            {currentIncomes || IncomeHandler}
           </div>
           <div className="summary__content-outcome">
-            {gastos || getCurrentSummary("outcome")}
+            {currentOutcomes || OutcomeHandler}
           </div>
         </div>
 

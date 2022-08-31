@@ -59,11 +59,7 @@ const App = () => {
   const [summary, setSummary] = useState("");
 
   const retrieveMonth = (e) => {
-    // console.log(e);
     setTitle(e);
-
-    // console.log(monthSummary[e]);
-
     setSummary(monthSummary[e]);
   };
 

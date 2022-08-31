@@ -17,16 +17,11 @@ const Months = (props) => {
 
   //   let mesActual = ;
 
-  const getMonth = (e) => {
-    // console.log(e);
-    props.onSaveMonth(e);
-  };
-
   // console.log(months);
   return (
     <div className="months">
       {months.map((mes) => (
-        <Month name={mes - 1} key={mes} onSaveMonth={getMonth} />
+        <Month name={mes - 1} key={mes} />
       ))}
     </div>
   );
