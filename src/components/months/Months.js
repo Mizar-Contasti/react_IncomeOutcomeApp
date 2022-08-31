@@ -15,13 +15,17 @@ const Months = (props) => {
     moment().add(6, "M").format("M"),
   ];
 
-  //   let mesActual = ;
+  const retrieveMonth = (e) => {
+    let monthValue = e.target.innerText;
+    console.log(monthValue);
 
-  // console.log(months);
+    // props.onSaveMonth(monthValue);
+  };
+
   return (
     <div className="months">
       {months.map((mes) => (
-        <Month name={mes - 1} key={mes} />
+        <Month onClick={retrieveMonth} name={mes - 1} key={mes} />
       ))}
     </div>
   );

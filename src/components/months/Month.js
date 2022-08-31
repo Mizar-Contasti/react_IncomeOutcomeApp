@@ -18,8 +18,9 @@ const Month = (props) => {
 
   const monthHandler = (e) => {
     let monthValue = e.target.innerText;
+    console.log(monthValue);
     // console.log(e.target);
-    props.onSaveMonth(monthValue);
+    // props.onSaveMonth(monthValue);
   };
 
   return (
