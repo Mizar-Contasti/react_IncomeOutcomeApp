@@ -1,0 +1,19 @@
+.movements {
+  height: 100%;
+  width: 100%;
+  background-color: slategrey;
+  font-size: 20px;
+}
+
+.movements__legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.movement {
+  display: flex;
+  flex-direction: row;
+  background-color: violet;
+  justify-content: space-around;
+}

@@ -1,13 +1,8 @@
 import "./Summary.css";
-import moment from "moment";
-import { useState } from "react";
-import data from "./../../data.json";
-import months from "./../../months.json";
+
+import Movements from "./../movements/Movements";
 
 const Summary = (props) => {
-  // const onChangeMonth = () => {};
-  console.log(props);
-
   return (
     <div className="summary">
       <div className="summary__title">{props.month}</div>
@@ -36,6 +31,7 @@ const Summary = (props) => {
 
         <div className="summary__movements">
           <div className="summary__movements-title">Movimientos</div>
+          <Movements movements={props.movements} />
         </div>
       </div>
     </div>
