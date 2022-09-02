@@ -10,18 +10,19 @@ import moment from "moment";
 // console.log(months);
 
 const App = () => {
-  const monthHandler = (month) => {
-    setMonth(month);
-  };
-
   const [month, setMonth] = useState(
     months[moment().add(0, "M").format("M") - 1]
   );
+  const monthHandler = (month) => {
+    setMonth(month);
+
+    // update summary
+  };
 
   return (
     <div className="main">
       <div className="head">
-        <Header month={month} />
+        <Header />
       </div>
 
       <div className="body">
