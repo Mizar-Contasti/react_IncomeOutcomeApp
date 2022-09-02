@@ -25,6 +25,26 @@
   width: 100%;
 }
 
+.summary__resume-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.summary__resume-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: burlywood;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .summary__resumme--title {
   display: flex;
   flex-direction: column;

@@ -1,131 +1,75 @@
 {
   "Start": [
     {
-      "debt": 1200,
-      "currently": 500
+      "amount": 1000,
+      "attr": "outcome",
+      "type": "tdc",
+      "tdc": 1200
+    },
+    {
+      "amount": 1000,
+      "attr": "outcome",
+      "type": "bank",
+      "tdc": 1200
+    },
+    {
+      "amount": 1000,
+      "attr": "income",
+      "type": "cash",
+      "tdc": 1200
+    },
+    {
+      "amount": 1000,
+      "attr": "income",
+      "type": "debt",
+      "tdc": 1200
     }
   ],
   "Movements": [
     {
-      "Monthly": [
-        {
-          "Agosto": [
-            {
-              "Incomes": [
-                {
-                  "name": "inversion",
-                  "amount": 250,
-                  "description": "retorno de inversion"
-                }
-              ],
-              "Outcomes": [
-                {
-                  "name": "parque",
-                  "amount": 500,
-                  "description": "salida al parque"
-                }
-              ]
-            }
-          ],
-          "Septiembre": [
-            {
-              "Incomes": [
-                {
-                  "name": "inversion",
-                  "amount": 250,
-                  "description": "retorno de inversion"
-                }
-              ],
-              "Outcomes": [
-                {
-                  "name": "parque",
-                  "amount": 500,
-                  "description": "salida al parque"
-                }
-              ]
-            }
-          ],
-          "Octubre": [
-            {
-              "Incomes": [
-                {
-                  "name": "inversion",
-                  "amount": 250,
-                  "description": "retorno de inversion"
-                }
-              ],
-              "Outcomes": [
-                {
-                  "name": "parque",
-                  "amount": 500,
-                  "description": "salida al parque"
-                }
-              ]
-            }
-          ],
-          "Noviembre": [
-            {
-              "Incomes": [
-                {
-                  "name": "inversion",
-                  "amount": 250,
-                  "description": "retorno de inversion"
-                }
-              ],
-              "Outcomes": [
-                {
-                  "name": "parque",
-                  "amount": 500,
-                  "description": "salida al parque"
-                }
-              ]
-            }
-          ],
-          "Diciembre": [
-            {
-              "Incomes": [
-                {
-                  "name": "inversion",
-                  "amount": 250,
-                  "description": "retorno de inversion"
-                }
-              ],
-              "Outcomes": [
-                {
-                  "name": "parque",
-                  "amount": 500,
-                  "description": "salida al parque"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "name": "tdc payment",
+      "amount": 1000,
+      "description": "pagando",
+      "attr": "outcome",
+      "type": "tdc",
+      "occurrence": "once",
+      "month": "Septiembre"
     },
     {
-      "Unusual": [
-        {
-          "Incomes": [
-            {
-              "name": "salary",
-              "amount": 55000,
-              "description": "salario base"
-            }
-          ],
-          "Outcomes": [
-            {
-              "name": "renta",
-              "amount": 5000,
-              "description": "rental base"
-            },
-            {
-              "name": "mercado",
-              "amount": 3000,
-              "description": "mercado base"
-            }
-          ]
-        }
-      ]
+      "name": "tdc payment",
+      "amount": 3000,
+      "description": "pagando",
+      "attr": "outcome",
+      "type": "tdc",
+      "occurrence": "once",
+      "month": "Septiembre"
+    },
+    {
+      "name": "Salary",
+      "amount": 55000,
+      "description": "salario base",
+      "attr": "income",
+      "type": "bank",
+      "occurrence": "repeat",
+      "month": "Septiembre"
+    },
+    {
+      "name": "gift",
+      "amount": 1000,
+      "description": "salario base",
+      "attr": "income",
+      "type": "bank",
+      "occurrence": "repeat",
+      "month": "Septiembre"
+    },
+    {
+      "name": "gift",
+      "amount": 3255,
+      "description": "salario base",
+      "attr": "income",
+      "type": "bank",
+      "occurrence": "repeat",
+      "month": "Septiembre"
     }
   ],
   "Config": [

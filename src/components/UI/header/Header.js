@@ -1,7 +1,7 @@
 import "./Header.css";
 
-const Header = () => {
-  return <div className="header">header</div>;
+const Header = (props) => {
+  return <div className="header">{props.month || "Header!"}</div>;
 };
 
 export default Header;

@@ -1,18 +1,33 @@
 import Navbar from "./components/UI/Navbar/Navbar";
 import Content from "./components/UI/content/Content";
 import Header from "./components/UI/header/Header";
+import { useState } from "react";
+
+import months from "./months.json";
+
+import moment from "moment";
+
+// console.log(months);
 
 const App = () => {
+  const monthHandler = (month) => {
+    setMonth(month);
+  };
+
+  const [month, setMonth] = useState(
+    months[moment().add(0, "M").format("M") - 1]
+  );
+
   return (
     <div className="main">
       <div className="head">
-        <Header />
+        <Header month={month} />
       </div>
 
       <div className="body">
-        <Content />
+        <Content month={month} />
 
-        <Navbar />
+        <Navbar onSaveMonth={monthHandler} />
       </div>
     </div>
   );

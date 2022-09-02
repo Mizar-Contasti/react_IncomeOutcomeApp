@@ -1,0 +1,5 @@
+{
+  "ocurrence": ["once", "repeat"],
+  "attr": ["income", "outcome"],
+  "type": ["tdc", "debt", "effective", "bank"]
+}

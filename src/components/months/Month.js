@@ -1,30 +1,26 @@
 // import { useState } from "react";
 
+import months from "./../../months.json";
+
 const Month = (props) => {
-  let allMonths = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
+  let allMonths = months;
 
   const monthHandler = (e) => {
     let monthValue = e.target.innerText;
-    console.log(monthValue);
+    // console.log(e);
+    // console.log(monthValue);
     // console.log(e.target);
-    // props.onSaveMonth(monthValue);
+    props.onSaveMonth(monthValue);
   };
 
   return (
-    <div className="month" key={props.id} onClick={monthHandler}>
+    <div
+      className="month"
+      key={props.id}
+      id={props.id}
+      value={props.id}
+      onClick={monthHandler}
+    >
       <div className="month__wrapper">{allMonths[props.name]}</div>
     </div>
   );

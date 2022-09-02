@@ -15,17 +15,19 @@ const Months = (props) => {
     moment().add(6, "M").format("M"),
   ];
 
-  const retrieveMonth = (e) => {
-    let monthValue = e.target.innerText;
-    console.log(monthValue);
+  // months.map((month) => {
+  //   return console.log(month);
+  // });
 
-    // props.onSaveMonth(monthValue);
+  const monthHandler = (e) => {
+    // console.log(e);
+    props.onSaveMonth(e);
   };
 
   return (
     <div className="months">
       {months.map((mes) => (
-        <Month onClick={retrieveMonth} name={mes - 1} key={mes} />
+        <Month onSaveMonth={monthHandler} name={mes - 1} key={mes - 1} />
       ))}
     </div>
   );
