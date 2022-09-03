@@ -1,11 +1,11 @@
 .content {
   width: 83%;
   height: 88vh;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .content__title {
-  background-color: tomato;
+  background-color: royalblue;
   display: flex;
   height: 11vh;
   justify-content: center;
@@ -13,11 +13,11 @@
 
   font-size: 24px;
   font-weight: 800;
-  box-shadow: 5px 5px 10px;
+  /* box-shadow: 5px 5px 10px; */
 }
 
 .content__summary {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 100%;
 
   display: flex;

@@ -3,6 +3,11 @@
   width: 100%;
   background-color: slategrey;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10px;
 }
 
 .movements__legend {
@@ -12,8 +17,21 @@
 }
 
 .movement {
+  background-color: rgb(231, 231, 231);
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 25%);
+  justify-content: start;
+  justify-items: start;
+  box-shadow: 0px 15px 10px -15px #111;
+  margin-bottom: 1px;
+  border-radius: 10px;
+}
+
+.movement__item {
   display: flex;
-  flex-direction: row;
-  background-color: violet;
-  justify-content: space-around;
+  /* background-color: aqua; */
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px 5px 20px;
 }
