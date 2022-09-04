@@ -3,6 +3,8 @@
   width: 100%;
   background-color: slategrey;
   font-size: 20px;
+  border-radius: 0px 0px 10px 10px;
+
   display: flex;
   flex-direction: column;
   /* justify-content: center; */

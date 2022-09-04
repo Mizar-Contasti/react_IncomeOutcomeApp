@@ -10,14 +10,14 @@
   height: 90px;
   display: flex;
 
-  background-color: red;
+  background-color: royalblue;
   margin-bottom: 10px;
   justify-content: right;
 }
 
 .month__wrapper {
   width: 87%;
-  background-color: blue;
+  background-color: rgb(231, 231, 231);
   justify-content: center;
 
   height: 100%;

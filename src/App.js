@@ -32,8 +32,10 @@ const App = () => {
     });
   };
 
-  const filterMovements = (movements) => {
-    return movements.map((res) => {
+  const filterMovements = (movements, month) => {
+    let result = movements.filter((item) => item.month === month);
+
+    return result.map((res) => {
       if (res.attr === "outcome") {
         return { ...res, amount: -res.amount };
       } else {
@@ -50,8 +52,8 @@ const App = () => {
     return baseIncome;
   };
 
-  let movements = filterMovements(data.Movements);
-  // console.log(movements);
+  let movements = filterMovements(data.Movements, month);
+  console.log(movements);
 
   let monthData = {
     tdc: {
@@ -71,21 +73,6 @@ const App = () => {
       repeat: calc(filterGroup(data.Movements, "debt", month, "repeat")),
     },
   };
-
-  // console.log(monthData);
-  // const [tdc, setTdc] = useState(monthData.tdc.once);
-  // const [bank, setBank] = useState(monthData.bank.repeat);
-  // const [cash, setCash] = useState(monthData.cash.once);
-  // const [debt, setDebt] = useState(monthData.debt.once);
-
-  // const changeData = () => {
-  //   console.log("data changed");
-  //   // setTitle(props.month);
-  //   setTdc(monthData.tdc.once);
-  //   setBank(monthData.bank.repeat);
-  //   setCash(monthData.cash.once);
-  //   setDebt(monthData.debt.once);
-  // };
 
   const monthHandler = (month) => {
     setMonth(month);
