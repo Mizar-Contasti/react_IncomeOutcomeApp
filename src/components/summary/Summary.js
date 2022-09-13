@@ -12,19 +12,19 @@ const Summary = (props) => {
         <div className="summary__resumme">
           <div className="summary__resume-row">
             <div className="summary__resume-item">
-              TDC {props.monthData.tdc.once || "0 $"}
+              TDC {props.monthData.tdc.once || "0"} $
             </div>
             <div className="summary__resume-item">
-              Deudas {props.monthData.debt.once || "0 $"}
+              Deudas {props.monthData.debt.once || "0"} $
             </div>
           </div>
 
           <div className="summary__resume-row">
             <div className="summary__resume-item">
-              Efectivo {props.monthData.cash.once || "0 $"}
+              Efectivo {props.monthData.cash.once || "0"} $
             </div>
             <div className="summary__resume-item">
-              Banco {props.monthData.bank.repeat || "0 $"}
+              Banco {props.monthData.bank.repeat || "0"} $
             </div>
           </div>
         </div>

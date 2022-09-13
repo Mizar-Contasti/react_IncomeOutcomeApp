@@ -37,6 +37,15 @@
     },
     {
       "name": "tdc payment",
+      "amount": 1000,
+      "description": "pagando",
+      "attr": "outcome",
+      "type": "tdc",
+      "occurrence": "once",
+      "month": "Diciembre"
+    },
+    {
+      "name": "tdc payment",
       "amount": 3000,
       "description": "pagando",
       "attr": "outcome",
@@ -70,6 +79,15 @@
       "type": "bank",
       "occurrence": "repeat",
       "month": "Septiembre"
+    },
+    {
+      "name": "gift",
+      "amount": 3255,
+      "description": "salario base",
+      "attr": "income",
+      "type": "bank",
+      "occurrence": "repeat",
+      "month": "Octubre"
     }
   ],
   "Config": [

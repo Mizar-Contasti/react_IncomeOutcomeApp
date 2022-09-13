@@ -10,7 +10,10 @@ const Navbar = (props) => {
   return (
     <div className="navbar">
       <div className="navbar__title">Meses</div>
-      <Months onSaveMonth={monthHandler} />
+      <Months
+        onSaveMonth={monthHandler}
+        monthsMovements={props.monthsMovements}
+      />
     </div>
   );
 };

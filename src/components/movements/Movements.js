@@ -2,7 +2,7 @@ import "./Movements.css";
 import Movement from "./Movement";
 
 const Movements = (props) => {
-  console.log(props.movements);
+  // console.log(props.movements);
   return (
     <div className="movements">
       <div className="movements__legend">

@@ -23,5 +23,21 @@
   height: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
+
   font-size: 20px;
+}
+
+.positive {
+  background-color: yellowgreen;
+}
+
+.negative {
+  background-color: orangered;
+}
+
+.month__title {
+}
+
+.month__amount {
 }

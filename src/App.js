@@ -53,7 +53,7 @@ const App = () => {
   };
 
   let movements = filterMovements(data.Movements, month);
-  console.log(movements);
+  // console.log(movements);
 
   let monthData = {
     tdc: {
@@ -78,6 +78,25 @@ const App = () => {
     setMonth(month);
   };
 
+  // console.log(movements);
+
+  // calc all month amount
+
+  const filterMonthsMovements = (movements) => {
+    return movements.map((res) => {
+      if (res.attr === "outcome") {
+        return { ...res, amount: -res.amount };
+      } else {
+        return res;
+      }
+    });
+  };
+
+  const monthsMovements = filterMonthsMovements(data.Movements);
+  // console.log(monthsMovements);
+
+  // let monthAmount = {};
+
   return (
     <div className="main">
       <div className="head">
@@ -87,7 +106,7 @@ const App = () => {
       <div className="body">
         <Content month={month} monthData={monthData} movements={movements} />
 
-        <Navbar onSaveMonth={monthHandler} />
+        <Navbar onSaveMonth={monthHandler} monthsMovements={monthsMovements} />
       </div>
     </div>
   );
