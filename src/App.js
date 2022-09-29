@@ -4,6 +4,9 @@ import Header from "./components/UI/header/Header";
 import { useState } from "react";
 import data from "./data.json";
 
+// import Modal from "./components/UI/modal/Modal";
+import Form from "./components/form/Form";
+
 import months from "./months.json";
 
 import moment from "moment";
@@ -99,6 +102,7 @@ const App = () => {
 
   return (
     <div className="main">
+      {/* <Modal /> */}
       <div className="head">
         <Header />
       </div>
@@ -107,6 +111,8 @@ const App = () => {
         <Content month={month} monthData={monthData} movements={movements} />
 
         <Navbar onSaveMonth={monthHandler} monthsMovements={monthsMovements} />
+
+        <Form />
       </div>
     </div>
   );
